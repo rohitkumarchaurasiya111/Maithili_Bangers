@@ -17,43 +17,43 @@
 
 ---
 
-## 🌟 Our Vision
+##  Our Vision
 
 **मैथिली Banger** was created with a heartfelt mission: **to preserve, celebrate, and circulate the rich cultural soul of Mithila to people across the globe.**
 
 Mithila is a land of unparalleled cultural richness — the birthplace of Mata Janaki (Sita), the timeless poetry of Mahakavi Vidyapati, the world-renowned Madhubani painting traditions, and a music tradition that breathes life into every celebration, harvest, and sacred ritual. From Dr. Sharda Sinha's deeply emotional Chhath and wedding melodies to romantic folk ballads and spiritual bhajans, Maithili music carries an emotional depth unlike anything else.
 
 This project aims to:
-- 🌸 **Bridge Generations:** Introduce the younger generation and diaspora youth to the sweetness (*misaas*) of Maithili language and music.
-- 🌍 **Global Access:** Provide anyone, anywhere in the world, with instant access to a continuous, uninterrupted stream of pure Maithili songs without commercial clutter.
-- 🎨 **Cultural Honor:** Highlight the sacred imagery of **Janakpur Dham (Janaki Mandir)** and traditional Madhubani motifs in a modern, state-of-the-art web interface.
+-  **Bridge Generations:** Introduce the younger generation and diaspora youth to the sweetness (*misaas*) of Maithili language and music.
+-  **Global Access:** Provide anyone, anywhere in the world, with instant access to a continuous, uninterrupted stream of pure Maithili songs without commercial clutter.
+-  **Cultural Honor:** Highlight the sacred imagery of **Janakpur Dham (Janaki Mandir)** and traditional Madhubani motifs in a modern, state-of-the-art web interface.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📻 **24/7 Nostalgic Radio:** Non-stop playback of iconic Maithili classics, folk songs, Chhath geet, and contemporary hits.
-- 🔄 **Live Dynamic Playlist Sync:** Powered by a serverless scraper that automatically syncs with the live YouTube playlist — newly added songs show up on the radio dynamically within minutes.
-- ⚡ **Zero-Latency Cold Start:** Pre-baked high-fidelity tracklist ensures instant playback without waiting for network requests.
-- 🏛️ **Janaki Dham Aesthetic:** Custom-crafted tab favicon and branding inspired by the majestic Janaki Mandir palace architecture and Madhubani folk art.
-- 👥 **Realtime Listener Presence:** Live listener count powered by Firebase Realtime Database with smooth simulated fallback.
-- 🎛️ **Full-Featured Modern Player:**
+-  **24/7 Nostalgic Radio:** Non-stop playback of iconic Maithili classics, folk songs, Chhath geet, and contemporary hits.
+-  **Live Dynamic Playlist Sync:** Powered by a serverless scraper that automatically syncs with the live YouTube playlist — newly added songs show up on the radio dynamically within minutes.
+-  **Zero-Latency Cold Start:** Pre-baked high-fidelity tracklist ensures instant playback without waiting for network requests.
+-  **Janaki Dham Aesthetic:** Custom-crafted tab favicon and branding inspired by the majestic Janaki Mandir palace architecture and Madhubani folk art.
+-  **Realtime Listener Presence:** Live listener count powered by Firebase Realtime Database with smooth simulated fallback.
+-  **Full-Featured Modern Player:**
   - True non-repeating Shuffle mode.
   - Interactive scrubbing progress bar with drag-to-seek.
   - Smart Volume control with memory persistence (`localStorage`).
   - Next / Previous track navigation.
   - Playlist drawer with drag-and-drop reordering.
-- ⌨️ **Keyboard Navigation & Visual Toasts:**
+-  **Keyboard Navigation & Visual Toasts:**
   - `Space` — Play / Pause
   - `Right Arrow` — Next Track
   - `Left Arrow` — Previous Track
   - `M` — Mute / Unmute
   - Instant on-screen toast notifications for every keyboard action.
-- 📱 **Responsive & Lightweight:** Smooth drifting background art, interactive canvas particles, and adaptive styling for mobile and desktop screens.
+-  **Responsive & Lightweight:** Smooth drifting background art, interactive canvas particles, and adaptive styling for mobile and desktop screens.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -66,7 +66,7 @@ This project aims to:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have [Node.js](https://nodejs.org/) (v18 or newer) installed.
@@ -97,7 +97,7 @@ Make sure you have [Node.js](https://nodejs.org/) (v18 or newer) installed.
 
 ---
 
-## ☁️ Deployment
+## Deployment
 
 This project is optimized for deployment on **Vercel**:
 
@@ -113,7 +113,7 @@ npx vercel
 
 ---
 
-## 🎶 Featured Artists & Heritage
+## Featured Artists & Heritage
 
 We bow with deep gratitude to the legends whose voices preserve the soul of Mithila:
 - **Dr. Sharda Sinha** (Bihar Kokila) — *The immortal voice of Mithila folk, Chhath, and Vivah geet.*
@@ -124,7 +124,7 @@ We bow with deep gratitude to the legends whose voices preserve the soul of Mith
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions to expand the track library, improve UI aesthetics, or add new cultural features are warmly welcomed!
 1. Fork the Project
@@ -135,7 +135,7 @@ Contributions to expand the track library, improve UI aesthetics, or add new cul
 
 ---
 
-## 📜 License & Credits
+## License & Credits
 
 - **Concept & Development:** [Rohit](https://www.linkedin.com/in/rohit-kumar-chaurasiya-0862b1272/) (`print_Rohit`)
 - **Culture & Heritage:** Dedicated to all Maithils worldwide and the holy land of **Janakpur Dham**.
