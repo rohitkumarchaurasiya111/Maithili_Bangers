@@ -27,11 +27,11 @@ async function handlePlaylistRequest(req, res) {
       }
     } catch {}
 
-    // 2. Check full playlist page if RSS returned fewer items
+    // 2. Fetch full playlist page to detect ALL songs beyond the 15 RSS limit
     try {
       const htmlRes = await fetch(`https://www.youtube.com/playlist?list=${id}`, {
         headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         }
       });
       if (htmlRes.ok) {
@@ -40,15 +40,25 @@ async function handlePlaylistRequest(req, res) {
         const uniqueIds = [...new Set(vids)];
         if (uniqueIds.length > tracks.length) {
           const knownIds = new Set(tracks.map(t => t.id));
-          for (const vid of uniqueIds) {
-            if (!knownIds.has(vid)) {
-              tracks.push({
-                id: vid,
-                title: `Track ${tracks.length + 1}`,
-                channel: 'मैथिली Banger'
-              });
-            }
-          }
+          const newIds = uniqueIds.filter(vid => !knownIds.has(vid));
+          const extraTracks = await Promise.all(newIds.map(async (vid, idx) => {
+            try {
+              const oembed = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${vid}`).then(r => r.json());
+              if (oembed && oembed.title) {
+                return {
+                  id: vid,
+                  title: oembed.title,
+                  channel: oembed.author_name || 'मैथिली Banger'
+                };
+              }
+            } catch {}
+            return {
+              id: vid,
+              title: `Track ${tracks.length + idx + 1}`,
+              channel: 'मैथिली Banger'
+            };
+          }));
+          tracks.push(...extraTracks);
         }
       }
     } catch {}

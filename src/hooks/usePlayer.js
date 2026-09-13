@@ -9,7 +9,7 @@ function getCachedTracks() {
     const saved = localStorage.getItem(CACHE_KEY);
     if (saved) {
       const parsed = JSON.parse(saved);
-      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      if (Array.isArray(parsed) && parsed.length >= DEFAULT_TRACKS.length) return parsed;
     }
   } catch {}
   return DEFAULT_TRACKS;
@@ -94,7 +94,7 @@ export function usePlayer() {
 
     async function loadDynamicPlaylist() {
       try {
-        const res = await fetch(`/api/playlist?id=${YOUTUBE_PLAYLIST_ID}`);
+        const res = await fetch(`/api/playlist?id=${YOUTUBE_PLAYLIST_ID}&t=${Date.now()}`);
         if (!res.ok) return;
         const data = await res.json();
         if (cancelled || !data.tracks || data.tracks.length === 0) return;
