@@ -1,0 +1,49 @@
+.particles-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.45;
+}
+
+.bg-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('/bg.jpeg');
+  background-size: cover;
+  background-position: center 30%;
+  will-change: transform;
+  animation: slow-drift 40s ease-in-out infinite alternate;
+}
+
+@keyframes slow-drift {
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1.04) translateX(-10px);
+  }
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(10, 22, 40, 0.35) 0%,
+      rgba(10, 22, 40, 0.15) 30%,
+      rgba(10, 22, 40, 0.55) 70%,
+      rgba(10, 22, 40, 0.92) 100%);
+}
+
+.bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(10, 22, 40, 0.6) 100%);
+}

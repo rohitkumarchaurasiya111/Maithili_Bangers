@@ -1,0 +1,61 @@
+.hero {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  bottom: var(--player-h);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+  padding-bottom: 40px;
+}
+
+.site-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.9;
+  text-align: center;
+  filter: drop-shadow(0 4px 32px rgba(0,0,0,0.6));
+}
+
+.title-devanagari {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: clamp(4.5rem, 12vw, 10rem);
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 4px 0 rgba(0,0,0,0.5), 0 0 60px rgba(13,148,136,0.4);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  animation: title-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.title-banger {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-top: -0.15em;
+  padding-bottom: 0.2em;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--emerald) 50%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: title-in 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes title-in {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.site-tagline {
+  margin-top: 18px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: title-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
